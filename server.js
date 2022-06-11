@@ -12,6 +12,10 @@ app.use(session({
     saveUninitialized: false
 }));
 
+app.use(flash());
+
+app.set('view engine', 'ejs');
+
 const router = require('./router');
 
 app.use(router);
